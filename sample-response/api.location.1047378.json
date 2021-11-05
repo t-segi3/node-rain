@@ -1,0 +1,140 @@
+{
+    "consolidated_weather": [{
+        "id": 6327273419440128,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "NNW",
+        "created": "2021-11-04T10:09:11.260055Z",
+        "applicable_date": "2021-11-04",
+        "min_temp": 25.92,
+        "max_temp": 32.99,
+        "the_temp": 32.285000000000004,
+        "wind_speed": 6.001892535398606,
+        "wind_direction": 348.7482456824299,
+        "air_pressure": 1009.0,
+        "humidity": 66,
+        "visibility": 12.846228028314641,
+        "predictability": 77
+    }, {
+        "id": 6008714151591936,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "WNW",
+        "created": "2021-11-04T10:09:14.078686Z",
+        "applicable_date": "2021-11-05",
+        "min_temp": 26.245,
+        "max_temp": 32.155,
+        "the_temp": 32.035,
+        "wind_speed": 5.035239039773058,
+        "wind_direction": 303.23966865954856,
+        "air_pressure": 1008.0,
+        "humidity": 68,
+        "visibility": 12.27363447466794,
+        "predictability": 77
+    }, {
+        "id": 5348480907214848,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "WNW",
+        "created": "2021-11-04T10:09:17.145411Z",
+        "applicable_date": "2021-11-06",
+        "min_temp": 25.784999999999997,
+        "max_temp": 31.875,
+        "the_temp": 29.975,
+        "wind_speed": 5.261789103019699,
+        "wind_direction": 299.64032553637776,
+        "air_pressure": 1008.0,
+        "humidity": 72,
+        "visibility": 11.327907520082718,
+        "predictability": 77
+    }, {
+        "id": 6260137376350208,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "WNW",
+        "created": "2021-11-04T10:09:20.065513Z",
+        "applicable_date": "2021-11-07",
+        "min_temp": 25.915,
+        "max_temp": 32.269999999999996,
+        "the_temp": 31.325,
+        "wind_speed": 4.419082886229752,
+        "wind_direction": 298.4808822342268,
+        "air_pressure": 1006.5,
+        "humidity": 69,
+        "visibility": 10.589097172512528,
+        "predictability": 77
+    }, {
+        "id": 6219136788070400,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "WNW",
+        "created": "2021-11-04T10:09:23.164738Z",
+        "applicable_date": "2021-11-08",
+        "min_temp": 26.455,
+        "max_temp": 31.67,
+        "the_temp": 30.91,
+        "wind_speed": 4.861677069532597,
+        "wind_direction": 291.1967573593125,
+        "air_pressure": 1007.0,
+        "humidity": 71,
+        "visibility": 11.253964348206473,
+        "predictability": 77
+    }, {
+        "id": 6474380814057472,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "SSW",
+        "created": "2021-11-04T10:09:26.238181Z",
+        "applicable_date": "2021-11-09",
+        "min_temp": 25.93,
+        "max_temp": 30.134999999999998,
+        "the_temp": 26.63,
+        "wind_speed": 5.187149447228188,
+        "wind_direction": 194.0,
+        "air_pressure": 1009.0,
+        "humidity": 80,
+        "visibility": 9.27831464248787,
+        "predictability": 77
+    }],
+    "time": "2021-11-04T17:17:57.016710+07:00",
+    "sun_rise": "2021-11-04T05:25:49.726458+07:00",
+    "sun_set": "2021-11-04T17:46:36.298920+07:00",
+    "timezone_name": "LMT",
+    "parent": {
+        "title": "Indonesia",
+        "location_type": "Country",
+        "woeid": 23424846,
+        "latt_long": "0.109740,113.917397"
+    },
+    "sources": [{
+        "title": "BBC",
+        "slug": "bbc",
+        "url": "http://www.bbc.co.uk/weather/",
+        "crawl_rate": 360
+    }, {
+        "title": "Forecast.io",
+        "slug": "forecast-io",
+        "url": "http://forecast.io/",
+        "crawl_rate": 480
+    }, {
+        "title": "Met Office",
+        "slug": "met-office",
+        "url": "http://www.metoffice.gov.uk/",
+        "crawl_rate": 180
+    }, {
+        "title": "OpenWeatherMap",
+        "slug": "openweathermap",
+        "url": "http://openweathermap.org/",
+        "crawl_rate": 360
+    }, {
+        "title": "World Weather Online",
+        "slug": "world-weather-online",
+        "url": "http://www.worldweatheronline.com/",
+        "crawl_rate": 360
+    }],
+    "title": "Jakarta",
+    "location_type": "City",
+    "woeid": 1047378,
+    "latt_long": "-6.171440,106.827820",
+    "timezone": "Asia/Jakarta"
+}
