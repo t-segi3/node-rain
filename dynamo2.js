@@ -11,8 +11,8 @@ dynamo.AWS.config.update({
 
 // model
 var Weather_Prediction = dynamo.define('Weather_Prediction', {
-    hashKey: 'applicable_date',
-    rangeKey: 'title',
+    hashKey: 'woeid',
+    rangeKey: 'applicable_date',
     timestamps: true,
     schema: {
         title: Joi.string(),
@@ -105,6 +105,26 @@ const insertItemBulk = (arrOfItem) => {
     });
 }
 
+// query 5 recent
+const getRecentData = async (woeid, start, finish) => {
+    console.log('getting recent data')
+    return new Promise((resolve, reject) => {
+        Weather_Prediction
+        .query(1047378)
+        .where('applicable_date').between(start, finish)
+        .limit(6)
+        .exec((err, acc) => {
+            if (err) {
+                console.log('err', err)
+            }
+            console.log('count result', acc.Count)
+            resolve(acc)
+        })
+    })
+}
+
+
+
 // get item
 const getItem = async (date, title) => {
     Weather_Prediction.get('2021-11-04', 'Jakarta', (err, acc) => {
@@ -138,5 +158,6 @@ const test = async () => {
 // test()
 
 module.exports = {
-    insertItemBulk
+    insertItemBulk,
+    getRecentData
 }

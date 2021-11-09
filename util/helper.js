@@ -36,6 +36,13 @@ const processResponse = async (response) => {
     return newItems
 }
 
+const sleep = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms)
+    })
+}
+
 module.exports = {
-    processResponse
+    processResponse,
+    sleep
 }
