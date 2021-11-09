@@ -1,0 +1,25 @@
+{
+    "title": "Jakarta",
+    "location_type": "City",
+    "woeid": 1047378,
+    "latt_long": "-6.171440,106.827820",
+    "timezone": "Asia/Jakarta",
+    "applicable_date": "2021-11-06",
+    "consolidated_weather": {
+        "id": 5348480907214848,
+        "weather_state_name": "Heavy Rain",
+        "weather_state_abbr": "hr",
+        "wind_direction_compass": "WNW",
+        "created": "2021-11-04T10:09:17.145411Z",
+        "applicable_date": "2021-11-06",
+        "min_temp": 25.784999999999997,
+        "max_temp": 31.875,
+        "the_temp": 29.975,
+        "wind_speed": 5.261789103019699,
+        "wind_direction": 299.64032553637776,
+        "air_pressure": 1008.0,
+        "humidity": 72,
+        "visibility": 11.327907520082718,
+        "predictability": 77
+    }
+}
