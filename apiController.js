@@ -50,7 +50,14 @@ const getPredictions = async (woeid, start, finish) => {
     for (var i = 0; i < result.Count; i++) {
         response.push(result.Items[i].attrs)
     }
+
+    console.log(response)
+
     return response
 }
 
-getPredictions(1047378, '2021-11-09', '2021-11-14')
+module.exports = {
+    getPredictions
+}
+
+// getPredictions(1047378, '2021-11-12', '2021-11-17')

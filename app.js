@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
     res.send('hello')
 })
 
+const { getPredictions } = require('./apiController')
+
 app.get('/api/getPrediction', async (req, res) => {
     
     const { woeid } = req.body
@@ -24,10 +26,13 @@ app.get('/api/getPrediction', async (req, res) => {
     let monthF = ("0" + (next6days.getMonth() + 1)).slice(-2);
     let yearF = next6days.getFullYear();
 
+    const weatherPredictions = await getPredictions(woeid, year + "-" + month + "-" + date, yearF + "-" + monthF + "-" + dateF)
+
     res.status(200).send({
         start: year + "-" + month + "-" + date,
         finish: yearF + "-" + monthF + "-" + dateF,
-        woeid: woeid
+        woeid: woeid,
+        data: weatherPredictions,
     })
 })
 
