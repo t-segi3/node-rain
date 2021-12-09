@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 
@@ -13,7 +15,7 @@ const { getPredictions } = require('./apiController')
 
 app.get('/api/getPrediction', async (req, res) => {
     
-    const { woeid } = req.body
+    const { woeid } = req.query
 
     let today = new Date();
     let date = ("0" + today.getDate()).slice(-2);
