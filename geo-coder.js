@@ -42,7 +42,7 @@ const _fetchTimeZoneOfCoordinate = async (lat, lng) => {
 
     try {
         const response = await axios.get(timezonedbURL + `&by=position&lat=`+lat+`&lng=`+lng)
-        console.log(response.data)
+        // console.log(response.data)
 
         return response.data
 
@@ -66,7 +66,7 @@ const _fetchWoeidOfCoordinate = async (city, lat, lng) => {
             }
         }
 
-        console.log(filtered)
+        // console.log(filtered)
         
         return filtered
 
@@ -76,17 +76,41 @@ const _fetchWoeidOfCoordinate = async (city, lat, lng) => {
 }
 
 // final function
-const ab = async (city) => {
+const searchByCityName = async (city) => {
     const res1 = await _getCoordinateOfLocation(city)
+    // console.log('geocode')
+    // console.log(res1[0])
     const tz = await _fetchTimeZoneOfCoordinate(res1[0].latitude, res1[0].longitude)
+    // console.log('timezone')
+    // console.log(tz)
     const woe = await _fetchWoeidOfCoordinate(city, res1[0].latitude, res1[0].longitude)
+    // console.log('woeid')
+    // console.log(woe[0])
+
+    console.log('woe length', woe.length)
 
     // check if woeid exist
     if (woe.length < 1) {
-        console.log('nope')
-        return
+        // console.log('nope')
+        return {
+            'success': false,
+            'message': 'city not found :(',
+            'data': {}
+        }
     }
-
-    console.log('yes')
+    return {
+        'success': true,
+        'data': {
+            'city': res1[0].title,
+            'country': tz.countryName,
+            'timezone': tz.zoneName,
+            'woeid': woe[0].woeid
+        }
+    }
+    
+    // console.log('yes')
 }
-ab('toronto')
+
+module.exports = {
+    searchByCityName
+}

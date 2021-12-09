@@ -38,6 +38,15 @@ app.get('/api/getPrediction', async (req, res) => {
     })
 })
 
+const { searchByCityName } = require('./geo-coder')
+
+app.get('/api/searchByCity', async (req, res) => {
+    const { city } = req.query
+
+    const result = await searchByCityName(city)
+
+    res.status(200).send(result)
+})
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
