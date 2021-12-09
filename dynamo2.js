@@ -1,7 +1,8 @@
+require('dotenv').config()
+
 const AWS = require('aws-sdk')
 const dynamo = require('dynamodb')
 const Joi = require('joi')
-require('dotenv').config()
 
 dynamo.AWS.config.update({
     region: process.env.AWS_DEFAULT_REGION,
@@ -110,7 +111,7 @@ const getRecentData = async (woeid, start, finish) => {
     console.log('getting recent data')
     return new Promise((resolve, reject) => {
         Weather_Prediction
-        .query(1047378)
+        .query(parseInt(woeid))
         .where('applicable_date').between(start, finish)
         .limit(6)
         .exec((err, acc) => {

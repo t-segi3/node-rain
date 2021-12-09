@@ -51,7 +51,7 @@ const getPredictions = async (woeid, start, finish) => {
         response.push(result.Items[i].attrs)
     }
 
-    console.log(response)
+    console.log(response[0].title)
 
     return response
 }
